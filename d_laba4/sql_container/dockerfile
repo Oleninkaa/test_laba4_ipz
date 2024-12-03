@@ -1,0 +1,10 @@
+FROM postgres:latest
+
+
+COPY /sql_scripts/2.sql 2.sql
+WORKDIR /sql
+
+EXPOSE 5432
+
+RUN chmod a+r /2.sql
+
